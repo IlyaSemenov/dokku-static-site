@@ -2,6 +2,8 @@
 
 This is a reusable Docker image that allows to deploy static sites to Dokku with Dockerfile (and without using buildbacks).
 
+Originally based on <https://github.com/glogiotatidis/dokku-static-site>
+
 ## HOW TO
 
 Create `Dockerfile` in the root of your static site with the following contents:
