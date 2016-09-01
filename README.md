@@ -4,18 +4,27 @@ This is a reusable Docker image that allows to deploy static sites to Dokku with
 
 ## HOW TO
 
-1. Put your static site into `html/` folder in the root of your project.
-
-2. Create `Dockerfile` in the root of your project with the following contents:
+Create `Dockerfile` in the root of your static site with the following contents:
 
 ```Dockerfile
 FROM ilyasemenov/dokku-static-site
 ```
 
-3. Push the project to Dokku as usual:
+Push the project to Dokku as usual:
 
 ```bash
 DOKKU_HOST=dokku.me dokku-client.sh apps:create mysite
 git push dokku master
-curl mysite.dokku.me
+```
+
+The site is now available at <http://mysite.dokku.me>
+
+### Ignoring certain files
+
+Create `.dockerignore` if you want to exclude certain files from getting exposed. For example, you may want this:
+
+```
+Dockerfile
+.dockerignore
+README.md
 ```
