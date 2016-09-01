@@ -9,7 +9,7 @@ This is a reusable Docker image that allows to deploy static sites to Dokku with
 2. Create `Dockerfile` in the root of your project with the following contents:
 
 ```Dockerfile
-FROM glogiotatidis/dokku-static-site
+FROM ilyasemenov/dokku-static-site
 ```
 
 3. Push the project to Dokku as usual:
